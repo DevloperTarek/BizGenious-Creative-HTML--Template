@@ -1,0 +1,54 @@
+
+.biz-customer-area-wrapper {
+    position: relative;
+    height: 300px;
+    .biz-customer-area-wrapper .shape-1 {
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        z-index: -1;
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+    }
+
+    .biz-customer-area-wrapper .shape-2 {
+        position: absolute;
+        right: -100px;
+        bottom: -100px;
+        animation-name: fadeIn;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+    }
+    .absolute-circle-area {
+        position: absolute;
+        right: -40px;
+        top: -40px;
+        z-index: 3;
+        i {
+            width: 80px;
+            height: 80px;
+            background: aquamarine;
+            /* opacity: .7; */
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 50%;
+            transform: rotate(180deg);
+        }
+    }
+    .customer-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1f1f1f;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

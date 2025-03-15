@@ -1,0 +1,48 @@
+@keyframes fadeInupper {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.2);}
+}
+
+// Video Play Btn
+
+@keyframes slide-in-round{
+    0%{
+        transform: scale(1);
+        opacity: .4;
+      }
+    100%{
+        transform: scale(1.4);
+        opacity:0;
+    }
+}
+
+// Provide Shape Animation
+
+@keyframes slideinUpper {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{transform: translateY(0);}
+}
+
+// Faq Animations
+@keyframes rotate-360deg{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes -rotate-360deg{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+// Primary Btn Animation
+@keyframes animate_slide_inTop_right{
+    100%{
+        left: 110%;
+        opacity:0;
+        width: 100%;
+    }
+}
+

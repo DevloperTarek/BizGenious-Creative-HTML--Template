@@ -1,0 +1,113 @@
+.biz-provide-special-service{
+    // section title area
+    .biz-provice-special-service-section-title{
+        .section-title-area-wrapper{
+            @include short-section-title;
+        }
+    }
+    .service-bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 450px;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &:hover::after{
+            animation: animate_slide_inTop_right .5s ease-out;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -100%;
+            background: $white;
+            width: 10px;
+            height: 100%;
+            z-index: -1;
+            transition: all .5s ease-out;
+            transform: translateY(-50%) skew(45deg);
+        }
+        .absolute-service-content {
+            background: #fff;
+            padding: 40px 25px;
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+            width: 90%;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            border: 0 none;
+            transition: all .4s ease-out;
+            transform: translateY(40%);
+            &:hover {
+                transform: translateY(7%);
+                .absolute-content-desc-text{
+                    .desc-text {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .service-logo {
+                    i{
+                        color: $white;
+                        background-color: $primary;
+                    }
+                }
+
+            }
+
+            .absolute-content {
+                font-size: 110px;
+                font-weight: 400;
+                font-family: 'Teko',sans-serif;
+                line-height: 91px;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                opacity: .4;
+                color: #ddd;
+            }
+            .absolute-content-desc-text{
+                .title-text {
+                    font-size: 40px;
+                    font-weight: 800;
+                    font-family: 'Teko',sans-serif;
+                    margin: 20px 0 10px 0;
+                    cursor: pointer;
+                    @include xs{font-size: 30px; font-weight: 600; line-height: 40px;}
+                }
+                .desc-text {
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: 'Manrope',sans-serif;
+                    line-height: 32px;
+                    letter-spacing: .5px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .5s ease-out;
+                }
+            }
+            .service-logo {
+                position: absolute;
+                top: -39px;
+                transition: all .4s ease-out;
+                i {
+                    width: 78px;
+                    height: 78px;
+                    background: #1f1f1f;
+                    text-align: center;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 43px;
+                    transition: all .5s ease-out;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

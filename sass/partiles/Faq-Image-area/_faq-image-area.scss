@@ -1,0 +1,76 @@
+.faq-image-group-area {
+        position: relative;
+        .faq-image {
+        //background-image: url('/images/faq/faq-images/faq-women-image.png');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center top;
+        // width: 480px;
+        // height: 656px;
+        z-index: 99;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &:hover::after{
+            animation: animate_slide_inTop_right .5s ease-out;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -100%;
+            background: $white;
+            width: 10px;
+            height: 100%;
+            transition: all .5s ease-out;
+            z-index: 1;
+            transform: translateY(-50%) skew(45deg);
+        }
+        img{width: 100%;}
+
+        .faq-absolute-circle-area {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $primary;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 210px;
+                height: 210px;
+                border: 2px dashed #fff;
+                border-radius: 50%;
+                animation: -rotate-360deg 15s linear infinite;
+            }
+            
+            &::after {
+                position: absolute;
+                content: "";
+                background-image: url('/images/faq/faq-images/faq-absolute-360-degree-cirle-text.png');
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 200px;
+                z-index: 1;
+                animation: rotate-360deg 10s linear infinite;
+            }
+        
+            .title{
+                font-size: 100px;
+                font-weight: 600;
+                font-family: 'Teko',sans-serif;
+                color: $white;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

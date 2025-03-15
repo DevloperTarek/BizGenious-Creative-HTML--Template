@@ -1,0 +1,45 @@
+.biz-brand-area-wraper{
+    &.brand-bg {
+        background: $primary;
+        // background-color: #000;
+        opacity: .8;
+        z-index: -1;
+        border: 0;
+        color: #fff;
+    }
+
+    .active-brand-slide {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .single-brand{
+            .brand-text {
+                &.brand-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    height: 167px;
+                    z-index: 1;
+                    flex-shrink: 0;
+                    color: $primary;
+                    img{width: 100%;}
+                    .brand-logo-text {
+                        font-size: 40px;
+                        @include rmaxwd(1500){font-size: 30px; font-weight: 600;}
+                        @include rmaxwd(1440){font-size: 30px; font-weight: 600;}
+                        @include xl {font-size: 35px; font-weight: 700;}
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight:800;
+                        color: $white;
+                        font-family: 'Teko',sans-serif;
+                        line-height: 45px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

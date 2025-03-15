@@ -1,0 +1,102 @@
+.biz-header-top-area-wrapper{
+    padding: 8px 0;
+    background: #1F1F1F;
+    @include rmaxwd(520){display: none; transition: all .4s ease-out;}
+    &.style-2{background-color: #fff; color: $secondary;}
+    &.style-3{
+        max-width: 1700px;
+        position: absolute;
+        width: 100%;
+        right: 0;
+    }
+    .biz-header-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include sm{flex-direction: column; gap: 20px;}
+        @include rmaxwd(520){display: none; transition: all .4s ease-out;}
+        .biz-header-top-left-area{
+            display: flex;
+            align-items: center;
+            &.style-2{.address{color: $secondary;}}
+            .address {
+                color: #fff;
+                margin-bottom: 0;
+                font-size: 12px;
+                line-height: 29px;
+                font-weight: 400;
+                span {
+                    color: $secondary;
+                    font-size: 12px;
+                    line-height: 29px;
+                    font-weight: 400;
+                }
+            }
+            &.style-2{.email-address-text{ a{color: $secondary;}}}
+            .email-address-text{
+                margin-bottom: 0;
+                a {
+                    color: $white;
+                    position: relative;
+                    text-decoration: none;
+                    font-size: 12px;
+                    line-height: 29px;
+                    font-weight: 400;
+                    padding-left: 30px;
+                    span{color: $secondary;}
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        left: 15px;
+                        width: 1px;
+                        font-weight: 400;
+                        height: 10px;
+                        background: $secondary;
+                        transform: translateY(-50%) rotate(25deg);
+                    }
+                }
+            }
+        }
+        .biz-header-top-right-area{
+            .header-top-menu {
+                list-style: none;
+                padding-left: 0;
+                margin-bottom: 0;
+                &.style-2{.menu-list{.menu-link{color: $secondary;}}}
+                .menu-list {
+                    display: inline-block;
+                    &:nth-child(1) {
+                        .menu-link{
+                            &::before {
+                                content: "";
+                                display: none;
+                            }
+                        }
+                    }
+                    .menu-link {
+                        color: $white;
+                        text-decoration: none;
+                        font-size: 12px;
+                        font-weight: 500;
+                        font-family: 'Manrope',sans-serif;
+                        position: relative;
+                        padding-left: 30px;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            top: 50%;
+                            left: 15px;
+                            width: 1px;
+                            height: 10px;
+                            background: $secondary;
+                            transform: translateY(-50%) rotate(25deg);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+

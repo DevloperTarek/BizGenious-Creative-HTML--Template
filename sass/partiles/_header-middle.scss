@@ -1,0 +1,266 @@
+
+    .biz-header-middle-area-wrapper {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: $header-middle-bg;
+        z-index: 99;
+        @include rmaxwd(760){top: 88px;}
+        @include rmaxwd(520){top:0;}
+        &.style-2{background-color: transparent;
+            .biz-header-middle-area {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 80px;
+                .header-middle-end-area{
+                    .header-contact-end-area{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        i{
+                            font-size: 35px;
+                            color: $primary;
+                        }
+                        .header-contact-inner{
+                            p {
+                                margin-bottom: 0;
+                                font-size: 12px;
+                                line-height: 29px;
+                                font-family: 'Manrope',sans-serif;
+                                color: #1f1f1f;
+                                font-weight: 400;
+                            }
+                            .contact-inner-number {
+                                margin-bottom: 0;
+                                line-height: 29px;
+                                font-size: 20px;
+                                a {
+                                    text-decoration: none;
+                                    color: #1f1f1f;
+                                    font-weight: 600;
+                                    font-family: 'Teko',sans-serif;
+                                    font-size: 20px;
+                                    line-height: 29px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .biz-header-middle-row {
+                    background-color: $secondary;
+                    .biz-header-middle-menu{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .mean-menu{
+                            .menu-area{
+                                .menu-list{
+                                    .menu-link{
+                                        padding: 37px 50px;
+                                    }
+                                }
+                            } 
+                        } 
+                    }
+                }
+            }
+        }
+        &.style-3{padding-top: 46px;
+            .biz-header-middle-row {
+                background-color: transparent !important;
+                .biz-header-middle-menu {
+                    .mean-menu{
+                        .menu-area{
+                            .menu-list{
+                                &.active{
+                                    .menu-link{
+                                        color: $primary !important;
+                                    }
+                                }
+                                .menu-link{
+                                    color: #1f1f1f !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .biz-header-middle-area{
+            .biz-header-middle-row{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                #small-device-hidden{
+                    // @include sm{display: none;}
+                    // @include rmaxwd(991){display: none;}
+                    .biz-header-middle-menu-area-wrap{
+                        .biz-header-middle-menu {
+                            @include sm{display: none;}
+                            @include rmaxwd(991){display: none;}
+                            @include rmaxwd(1650){display: flex; justify-content: flex-end; align-items: end;}
+                            .mean-menu {
+                                .menu-area {
+                                    list-style: none;
+                                    margin: 0;
+                                    padding: 0;
+                                    .menu-list {
+                                        display: inline-block;
+                                        position: relative;
+                                        &.dropdown-menu-list{
+                                            .menu-link{
+                                                &::before{
+                                                    position: absolute;
+                                                    content:"\2b";
+                                                    top: 50%;
+                                                    right: 15px;
+                                                    font-size: 25px;
+                                                    font-weight: 500;
+                                                    transform: translateY(-50%);
+                                                    transition: all .4s ease-out;
+                                                    color: $white;
+                                                    cursor: pointer;
+                                                }
+                                                &:hover{color: $primary;
+                                                    &::before{color: $primary;}
+                                                }
+                                            }
+                                        }
+                                        &.active{
+                                            .menu-link{color: $primary;
+                                                &::before{color: $primary;}
+                                            }
+                                        }
+                                        &:hover {
+                                            .dropdown {
+                                                visibility: visible;
+                                                opacity: 1;
+                                                transform: translateY(0);
+                                            }
+                                        }
+                                        .dropdown {
+                                            position: absolute;
+                                            list-style: none;
+                                            left: 0;
+                                            padding: 0;
+                                            width: 260px;
+                                            padding: 2px 15px;
+                                            background: #fff;
+                                            box-shadow: 0 0 10px 0 #ddd;
+                                            z-index: 99999;
+                                            transform: translateY(-10px);
+                                            transition: all .4s ease-out;
+                                            border-bottom: 4px solid #1f1f1f;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            .dropdown-list {
+                                                .dropdown-link {
+                                                    text-decoration: none;
+                                                    color: #1f1f1f;
+                                                    font-size: 16px;
+                                                    display: block;
+                                                    font-weight: 500;
+                                                    padding: 8px;
+                                                    text-transform: uppercase;
+                                                    font-family:'Manrope',sans-serif;
+                                                    letter-spacing: 1px;
+                                                    transition: all .4s linear;
+                                                    border-bottom: 1px solid #ddd;
+                                                    position: relative;
+                                                    &:hover{
+                                                        color: $primary;
+                                                        padding-left: 15px;
+                                                    }
+                                                    &::after{
+                                                        position: absolute;
+                                                        left: 0;
+                                                        top: 50%;
+                                                        width: 10px;
+                                                        height: 1px;
+                                                        content: "";
+                                                        transition: all .4s ease-out;
+                                                        transform: scale(0);
+                                                        background-color: $primary;
+                                                        opacity: 0;
+                                                        visibility: hidden;
+                                                        border-radius: 30px;
+                                                    }
+                                                    &:hover::after{transform: scale(1); opacity: 1; visibility: visible;}
+                                                }
+                                                &:last-child .dropdown-link{border-bottom: none;}
+                                            }
+                                        }
+                                        .menu-link {
+                                            text-decoration: none;
+                                            color: #fff;
+                                            font-size: 16px;
+                                            font-weight: 800;
+                                            text-transform: uppercase;
+                                            font-family: 'Manrope',sans-serif;
+                                            display: block;
+                                            transition: all .4s ease-out;
+                                            padding: 37px;
+                                            position: relative;
+                                            &:hover{color: $primary;}
+                                            // i {
+                                                // padding-left: 5px;
+                                                // font-size: 16px;
+                                                // cursor: pointer;
+                                                // transition: all .4s ease-out;
+                                            // }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .biz-header-middle-end-area-wrapper{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            gap: 30px;
+                            .toggle-responsive-btn{
+                                i{
+                                    font-size: 20px;
+                                    cursor: pointer;
+                                    color: #fff;
+                                    transition: all .4s ease-in-out;
+                                    &:hover{color: $primary;}
+                                }
+                            }
+                            .biz-header-middle-end-area {
+                                display: flex;
+                                align-items: center;
+                                gap: 45px;
+                                justify-content: flex-end;
+                                @include rmaxwd(1650){display: none !important;}
+                                @include rmaxwd(1400){display: flex;}
+                                .search-buton-area {
+                                    i{
+                                        color: #fff;
+                                        transition: all .4s ease-out;
+                                        font-size: 25px;
+                                        font-weight: 300;
+                                        &:hover {
+                                            color: $primary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+// .dropdown-link:nth-last-child() {
+    // border-bottom: none;
+// }
+// 

@@ -1,0 +1,19 @@
+.container{
+    max-width: 1350px;
+    width: 100%;
+    margin: auto;
+    padding: 0 1rem;
+}
+.container-fluid{
+    max-width: 2100px;
+    width: 100%;
+    margin: auto;
+    padding: 0 130px;
+    @media only screen and (min-width: 0px) and (max-width: 767px){padding: 0 30px;}
+    @media only screen and (min-width: 768px) and (max-width: 1400px){padding: 0 60px;}
+}
+
+.section{
+    overflow-x: hidden;
+}
+body,html{overflow-x: hidden;}

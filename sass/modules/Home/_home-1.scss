@@ -1,0 +1,149 @@
+
+.biz-home-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    .biz-shape-1 {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        @include xs{z-index: -1;}
+        bottom: 0;
+        transition: all .4s ease-out;
+        animation-name: fadeInUp;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    // Slider Area
+
+
+    #active-slick-slider {
+        .slider-arrow-btn {
+            position: absolute;
+            z-index: 9;
+            top: 50%;
+            right: 20%;
+            @include xs{right: 5%;}
+            background: none;
+            border: 0;
+            &.prev-btn {
+                top: 56%;
+                @include sm{top: 40%;}
+                i {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+            i {
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $white;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: all .4s ease-in;
+                font-size: 20px;
+                padding: 20px;
+                font-weight: 300;
+                &:hover {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+        }
+        .biz-single-home-area {
+            position: relative;
+            z-index: 1;
+            padding: 300px 0;
+            overflow: hidden;
+            @include sm{padding: 180px 0;}
+            .biz-background-image {
+                background-color: $secondary;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                object-fit: cover;
+                z-index: -1;
+                animation: fadeInupper 5s ease-in 1s infinite alternate none;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #151519;
+                    opacity: .2;
+                    z-index: -1;
+                }
+            
+            }
+            .biz-single-home-content-wraper{
+                .biz-single-content {
+                    .home-sub-title {
+                        font-size: 20px;
+                        font-weight: 600;
+                        font-family: 'Teko',sans-serif;
+                        line-height: 30px;
+                        letter-spacing: 15px;
+                        text-transform: uppercase;
+                        color: $white;
+                        animation-name: fadeInUp;
+                        animation-duration: 4s;;
+                        animation-timing-function: ease-in;
+                        animation-delay: 2;
+                        animation-iteration-count: infinite;
+                        margin-bottom: 0;
+                    }
+                    .home-title {
+                        font-size: 100px;
+                        font-weight: 600;
+                        line-height: 110px;
+                        font-family: 'Teko',sans-serif;
+                        color: $white;
+                        animation-name: fadeIn;
+                        animation-duration: 5s;;
+                        animation-timing-function: ease-in;
+                        animation-delay: 2;
+                        animation-iteration-count: infinite;
+                        z-index: 1;
+                        margin-bottom: 20px;
+                        @include sm{font-size: 60px; line-height: 70px;}
+                        @include rmaxwd(460){font-size: 50px; line-height: 60px;}
+                        @include rmaxwd(320){font-size: 50px; line-height: 60px;}
+                        > b {
+                            position: relative;
+                            color: $primary;
+                            &::after {
+                                position: absolute;
+                                bottom: 32px;
+                                @include sm{bottom: 18px;}
+                                @include xs{bottom: 15px;}
+                                @include rmaxwd(460){bottom: 15px;}
+                                left: 0;
+                                width: 100%;
+                                height: 1px;
+                                content: "";
+                                border-bottom-width: 5px;
+                                border-bottom: 5px dashed $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
