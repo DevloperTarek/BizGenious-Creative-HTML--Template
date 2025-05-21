@@ -1,0 +1,60 @@
+.biz-customer-slick-slide-active{
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        content: '99';
+        color: $white;
+        width: 50px;
+        height: 50px;
+        background-color: #3fc9ac;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        border-radius: 50px;
+        font-weight: 500;
+    }
+}
+.single-customer-slider {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    border: 2px solid;
+}
+#active-customer-slick-slider .customer-arrow-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    bottom: -40px;
+}
+
+#active-customer-slick-slider .customer-arrow-btn.next-btn {
+    margin: 0 60px;
+    margin-right: 0;
+}
+
+.biz-customer-slick {
+    position: relative;
+}
+
+.biz-customer-shapes.shapes-1 {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
+
+.biz-customer-shapes.shapes-2 {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+}

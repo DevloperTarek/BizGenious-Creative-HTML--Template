@@ -1,0 +1,136 @@
+.login-form-bg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+    &:hover::after{
+        animation: animate_slide_inTop_right .7s ease-out;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: -100%;
+        background: $white;
+        opacity: .7;
+        width: 10px;
+        height: 100%;
+        transition: all .5s ease-out;
+        z-index: 1;
+        transform: translateY(-50%) skew(45deg);
+    }
+}
+
+.login-form {
+    background: #ddd;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px 0 #ddd;
+    .input-filed {
+        position: relative;
+        input {
+            width: 100%;
+            border: 0;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: capitalize;
+            font-family: 'Teko',sans-serif;
+            letter-spacing: .6px;
+            background: none;
+            transition: all .4s ease-out;
+            border-bottom: 1px solid #f6f6f6;
+            &:focus {
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $primary;
+                background-color: transparent;  
+                ~.absolute-in-input-filed {
+                    position: absolute;
+                    top: -13px;
+                    left: 10px;
+                    background: #ddd;
+                    padding: 0 5px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    font-family: 'Teko',sans-serif;
+                    transition: all .4s ease-out;
+                    color: #000;
+                }
+            }
+        }
+        input[type=submit] {
+            font-size: 20px;
+            transition: all .4s ease-out;
+            border-bottom: 0;
+            position: relative;
+            background-color: $primary;
+            overflow: hidden;
+            &::after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: -100%;
+                background: $white;
+                opacity: .7;
+                width: 10px;
+                height: 100%;
+                transition: all .5s ease-out;
+                z-index: 2;
+                transform: translateY(-50%) skew(45deg);
+            }
+            &:hover {
+                background: $primary;
+                color: $white;
+                &::after{
+                    animation: animate_slide_inTop_right .7s ease-out;
+                }
+            }
+        }
+        .absolute-in-input-filed{
+            position: absolute;
+            top: -26px;
+            left: 0;
+            font-weight: 500;
+            font-family: 'Teko',sans-serif;
+            color: #fff;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            span {
+                color: red;
+                font-size: 16px;
+                line-height: 23px;
+                margin-top: 5px;
+                font-weight: 600;
+                padding-left: 5px;
+            }
+        }
+    }   
+    .password-resate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        hr.horizontal-line {
+            background-color: #f6f6f6 !important;
+            height: 1px;
+            width: 100%;
+        }
+        input[type=checkbox]:checked {
+            background: $primary;
+            color: $white;
+        }
+        .resate-password {
+            text-decoration: none;
+            font-weight: 500;
+            color: $primary;
+        }
+    }
+}

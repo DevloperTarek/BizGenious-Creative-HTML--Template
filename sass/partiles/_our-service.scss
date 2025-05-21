@@ -1,0 +1,49 @@
+
+.our-service-wrapper{
+    background-color: #1f1f1f;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.single-service-wraper {
+    padding: 40px;
+    background: #000;
+    border-radius: 15px;
+    opacity: .4;
+    color: #fff;
+    margin-right: 40px;
+    min-height: 570px;
+    height: 100%;
+    box-shadow: 0 50px 100px 0 rgba(0,0,0, 0.9);
+}
+.service-logo {
+    font-size: 80px;
+    max-width: 150px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+.service-logo i{
+    font-size: 80px;
+}
+.service-logo img{width: 100%; object-fit: cover;}
+
+.service-title {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.service-details {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}

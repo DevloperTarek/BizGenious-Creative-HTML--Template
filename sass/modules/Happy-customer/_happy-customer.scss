@@ -1,0 +1,85 @@
+.single-happy-customer-area {
+    padding: 20px;
+    box-shadow: 0 0 10px 0 #f6f6f6;
+    border-radius: 10px;
+    margin: 15px;
+    .happy-customer-content {
+        position: relative;
+        z-index: 1;
+        min-height: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding-left: 65px;
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 40px;
+            width: 1px;
+            height: 100%;
+            background: $primary;
+            opacity: .2;
+        }
+
+        &::after {
+            position: absolute;
+            content: ",,";
+            top: 37%;
+            left: 0;
+            transform: translateY(-37%);
+            line-height: 1;
+            font-size: 35px;
+        }
+        .customer-details {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: .6px;
+            line-height: 36px;
+            font-family: 'Manrope',sans-serif;
+        }
+        .customer-bio {
+            .customer-name {
+                font-size: 25px;
+                font-weight: 600;
+                font-family: 'Teko',sans-serif;
+                text-transform: uppercase;
+                letter-spacing: .8px;
+                span {
+                    display: block;
+                    font-weight: normal;
+                    font-size: 61%;
+                    font-family: 'Manrope',sans-serif;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+#happy-customer-slick {
+    .slick-arrow {
+        border: 0;
+        padding: 10px 25px;
+        font-size: 25px;
+        position: absolute;
+        cursor: pointer;
+        top: -150px;
+        z-index: 99;
+        @include sm{top: auto; bottom: -40px; right: 0;}
+        @include rmaxwd(920){top: auto; bottom: -40px; right: 0;}
+        right: 0;
+        transition: all .4s ease-out;
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+        &.prev-btn {
+            right: 100px;
+            background: $primary;
+            color: $white;
+        }
+    }
+}

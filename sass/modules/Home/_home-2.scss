@@ -1,0 +1,161 @@
+.hero-area-wraper.area-bg {
+    background: #403879;
+}
+
+.hero-area-wraper .row {
+    display: flex;
+    align-items: center;
+}
+
+.hero-content-area .hero-title {
+    color: #fff;
+    font-family: 'Teko',sans-serif;
+    line-height: 100px;
+    font-size: 80px;
+}
+
+.hero-content-area .hero-desc {
+    color: #fff;
+    font-size: 26px;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+.hero-content-area .lets-start-btn {
+    color: #000;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Teko',sans-serif;
+    background: #eeac09;
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 0;
+}
+.section-title-content .title {
+    font-size: 45px;
+    font-weight: 600;
+    font-family: 'Teko',sans-serif;
+    line-height: 60px;
+}
+
+.section-title-content p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.hero-area-image {
+    position: relative;
+    z-index: 1;
+    margin: 20px;
+    padding:40px;
+    animation: slideInUpper 6s ease-out infinite alternate;
+    overflow: hidden;
+}
+.hero-area-image:hover{
+    animation-name: rubberBand;
+    animation-duration: 1.4s;
+    animation-iteration-count: initial;
+    animation-delay: .1s;
+}
+
+.hero-area-image::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    background: $primary;
+    content: "";
+    height: 60%;
+    transform: translate(-50%, -50%);
+    opacity: .6;
+    z-index: -1;
+    animation: slideIn360 3s linear infinite;
+}
+@keyframes slideIn360{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
+@keyframes slideInUpper{
+    0%{transform: scale(1);}
+    100%{
+        transform: scale(1.03);
+    }
+}
+.hero-area-image img{
+    width: 100%;
+}
+
+.hero-area-image img {
+    width: 100%;
+}
+
+#active-hero-slider button {
+    border: none;
+    background: none;
+    transition: all .4s ease-out;
+}
+.slick-dots {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -145px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slick-dots li {
+    display: inline-block;
+}
+
+.slick-dots li button {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Teko',sans-serif;
+    padding: 0 22px;
+}
+
+.slick-dots li.slick-active button {
+    color: red;
+    font-size: 40px;
+    transform: scale(2);
+    transition: all .4s ease-out;
+}
+
+
+
+// home page three
+.slider-image img {
+    position: absolute;
+    right: 0;
+    object-fit: cover;
+    bottom: 0;
+    max-height: 400px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.slider-content {
+    padding: 140px 0;
+}
+
+.header-area {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.home-page-area {
+    position: relative;
+}
+
+.single-slider-item.slider-bg {
+    background: #ddd;
+}

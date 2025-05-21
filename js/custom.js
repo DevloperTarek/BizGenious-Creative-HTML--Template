@@ -6,10 +6,15 @@
        Jquery Mobile Menu
        ============================*/
         $('#mean-menu').meanmenu({
-            meanMenuContainer: '.biz-sidebar-active-responsive',
+            meanMenuContainer: '.sidebar-active-area',
             meanScreenWidth: "991",
             meanExpand: ['<i class="fas fa-chevron-down"></i>'],
         });
+        // $('#mean-menu').meanmenu({
+        //     meanMenuContainer: '.biz-sidebar-active-responsive',
+        //     meanScreenWidth: "991",
+        //     meanExpand: ['<i class="fas fa-chevron-down"></i>'],
+        // });
 
         /*
        Jquery Sidebar Toggle
@@ -48,9 +53,17 @@
             $('.biz-responsive-sidebar-wrapper').addClass('active');
              $(".overlay-body").addClass("active");
         })
+        $('#toggle-btn').on('click', () => {
+            $('.sidebar-mean-menu-wraper').addClass('active');
+             $(".overlay-body").addClass("active");
+        })
         // Sidebar Toggle Close
         $('#biz-sidebar-toggle-btn').on('click', () => {
             $('.biz-responsive-sidebar-wrapper').removeClass('active');
+            $(".overlay-body").removeClass("active");
+        })
+        $('#biz-sidebar-toggle-btn').on('click', () => {
+            $('.sidebar-mean-menu-wraper').removeClass('active');
             $(".overlay-body").removeClass("active");
         })
 
@@ -125,7 +138,7 @@
             speed: 5000,
             arrows: false,
             swipe: false,
-            slidesToShow: 5,
+            slidesToShow: 4,
             cssEase: 'linear',
             pauseOnFocus: false,
             pauseOnHover: true,
@@ -133,7 +146,7 @@
                 {
                     breakpoint: 2800,
                     settings: {
-                        slidesToShow: 5,
+                        slidesToShow: 4,
                     },
                 },
                 {
@@ -143,7 +156,7 @@
                     },
                 },
                 {
-                    breakpoint: 1300,
+                    breakpoint: 1400,
                     settings: {
                         slidesToShow: 3,
                     },
@@ -154,10 +167,16 @@
                         slidesToShow: 3,
                     },
                 },
-                 {
+                {
                     breakpoint: 767,
                     settings: {
                         slidesToShow: 2,
+                    },
+                },
+                {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 1,
                     },
                 },
             ],
@@ -201,7 +220,7 @@
         /*
        Info Card Slider
        ============================*/
-        $("#active-slick-slider").slick({
+        $("#active-customer-slick-slider").slick({
             slidesToShow: 1,
             infinite: true,
             autoplay: true,
@@ -264,33 +283,32 @@
         /*
        Client-Slider
        ============================*/
-       $("#active-grid-slider").slick({
-        slidesToShow: 4,
+       $("#happy-customer-slick").slick({
+        slidesToShow: 3,
         infinite: true,
-           //centerMode: true,
-        //variableWidth:20,
-        autoplay: true,
+        autoplay: false,
         draggable: true,
         arrows: true,
         slidesToScroll: 1,
         loop: true,
         dots: false,
         speed: 1500,
+        centerMode: true,
         prevArrow:
             "<button type='button' class='portfolio-arrow-btn prev-btn'><i class='fa-solid fa-angle-left'></i></button>",
         nextArrow:
             "<button type='button' class='portfolio-arrow-btn next-btn'><i class='fa-solid fa-angle-right'></i></button>",
            responsive: [
             {
-                breakpoint: 1409,
+                breakpoint: 2500,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                 },
             },
             {
                 breakpoint: 1099,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                 },
             },
             {
@@ -302,53 +320,47 @@
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-
-            {
-                breakpoint: 380,
-                settings: {
                     slidesToShow: 1,
                 },
             },
         ],
     });
-        /*
+    /*
        Testimonial Slider
-       ============================*/
-       $("Tesimonials").slick({
+       ============================
+    */
+       $("#biz-team-member").slick({
         slidesToShow: 4,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         draggable: true,
-        arrows: true,
         slidesToScroll: 1,
         loop: true,
         dots: false,
-        speed: 1500,
-        centerMode: true,
+        speed: 600,
+        slow:200,
+        arrows: true,
         prevArrow:
             "<button type='button' class='testimonial-arrow-btn prev-btn'><i class='fa-solid fa-arrow-left title-1'></i></button>",
         nextArrow:
             "<button type='button' class='testimonial-arrow-btn next-btn active'><i class='fa-solid fa-arrow-right title-1'></i></button>",
         responsive: [
             {
-                breakpoint: 1400,
+                breakpoint: 2500,
                 settings: {
                     slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 910,
+                settings: {
+                    slidesToShow: 2,
                 },
             },
             {
@@ -357,6 +369,12 @@
                     slidesToShow: 1,
                 },
             },
+            // {
+            //     breakpoint: 620,
+            //     settings: {
+            //         slidesToShow: 1,
+            //     },
+            // },
         ],
     });
     
@@ -422,8 +440,8 @@
         /*
        Related Portfolio Slider
        ============================*/
-        $(".biz-customer-slider-active-hear").slick({
-            slidesToShow: 1,
+        $(".biz-project-wrap").slick({
+            slidesToShow: 3,
             infinite: true,
             autoplay: true,
             draggable: true,
@@ -438,13 +456,31 @@
                 "<button type='button' class='customer-arrow-btn next-btn'><i class='fa-solid fa-long-arrow-right'></i></button>",
             responsive: [
                 {
+                    breakpoint: 2600,
+                    settings: {
+                        slidesToShow: 4,
+                    },
+                },
+                {
                     breakpoint: 992,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 3,
+                    },
+                },
+                {
+                    breakpoint: 860,
+                    settings: {
+                        slidesToShow: 2,
                     },
                 },
                 {
                     breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    },
+                },
+                {
+                    breakpoint: 580,
                     settings: {
                         slidesToShow: 1,
                     },
@@ -453,15 +489,15 @@
         });
 
         // portfolio-area slider style-1
-        $(".portfolio-slider").slick({
-            slidesToShow: 3,
+        $("#active-hero-slider").slick({
+            slidesToShow: 1,
             infinite: true,
-            autoplay: false,
+            autoplay: true,
             draggable: true,
             arrows: false,
             slidesToScroll: 1,
             loop: true,
-            dots: false,
+            dots: true,
             speed: 1500,
             prevArrow:
                 "<button type='button' class='testimonial-arrow-btn prev-btn'><i class='fa-solid fa-angle-left'></i></button>",
@@ -472,7 +508,7 @@
                     breakpoint: 991,
                     settings: {
                         autoplay: true,
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                     },
                 },
                 {
@@ -522,7 +558,7 @@
     });
 
         // portfolio-area slider style-1
-        $(".biz-project-wrap").slick({
+        $(".biz-project-wrap__").slick({
             slidesToShow: 4,
             infinite: true,
             autoplay: false,
@@ -611,7 +647,7 @@
         /*
        Jquery Nice Select Js
        ============================*/
-        $('select.select_option, select.wpcf7-select').niceSelect();
+        $('select.select_option, select.wpcf7-select,select').niceSelect();
 
         /*
        Jquery Tilt Js

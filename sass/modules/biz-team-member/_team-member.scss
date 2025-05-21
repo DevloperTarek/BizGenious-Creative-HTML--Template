@@ -1,0 +1,70 @@
+
+.single-team-membar {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    transition: all .4s ease-out;
+    margin-right: 15px;
+}
+
+.single-team-membar:hover {
+    opacity: .8;
+    border-right: 1px double $primary;
+}
+
+.single-team-membar .team-member-image {
+    background-color: $primary;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 150px;
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px double $primary;
+}
+
+.team-member-details .member-info .member-name {
+    font-family: 'Teko',sans-serif;
+    font-weight: 700;
+    letter-spacing: .7px;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+
+.team-member-details .member-info .member-profession {
+    font-size: 17px;
+    font-family: 'Manrope',sans-serif;
+    letter-spacing: .7px;
+    opacity: .7;
+    text-transform: uppercase;
+}
+
+.team-member-details .member-info .member-bio {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+#biz-team-member .slick-arrow.prev-btn {
+    right: 100px;
+    background: $primary;
+    color: $white;
+}
+#biz-team-member .slick-arrow{
+    @include transition;
+    position: absolute;
+    top: -140px;
+    right: 0;
+    @include sm{top: auto; bottom: -40px;}
+    @include rmaxwd(910){top: auto; bottom: -40px;}
+    padding: 10px 20px;
+    border: none;
+    background-color: none;
+}
+#biz-team-member .slick-arrow:hover{
+    background: $primary;
+    color: $white;
+}

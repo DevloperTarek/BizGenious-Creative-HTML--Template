@@ -1,0 +1,65 @@
+.biz-footer-area.biz-footer-bg {
+    background: #1f1f1f;
+    opacity: .9;
+}
+
+.biz-footer-widget-start .footer-widget-socal-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.biz-footer-widget-start .footer-widget-socal-link .socal-links i {
+    font-size: 17px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    transition: all .4s ease-out;
+    position: relative;
+    border-radius: 50px;
+}
+.primary-font{
+    font-family: 'Teko',sans-serif;
+}
+.footer-widget-first-box .input-filed{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-widget-small-boxs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer-widget-small-boxs .box-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    transition: all .4s ease-out;
+}
+.footer-widget-first-box .input-filed input[type=email] {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: .7px;
+}
+
+.footer-widget-first-box .input-filed input[type=submit] {
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}

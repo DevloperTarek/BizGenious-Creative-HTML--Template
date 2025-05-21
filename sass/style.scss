@@ -57,17 +57,28 @@
 
 // Modules files
 @import './modules/Home/home-1';
+@import './modules/Home/home-2';
 @import './modules/Home-service-1/home-service-1';
 @import './modules/Providing-area/software-provide';
 @import './modules/Special-Agent-Service/special-agent-service';
 @import './modules/Faq-Accordion/faq-accordion';
 @import './modules/Brand-area/brans';
+@import './modules/Call-to-action/call-to-action';
+@import './modules/Our-Customer/customer';
+@import './modules/pricing-table/pricing-table';
+@import './modules/biz-team-member/team-member';
+@import './modules/Features/biz-features';
+@import './modules/Happy-customer/happy-customer';
+@import './modules/about/about-us';
+@import './modules/login';
+@import './modules/footer';
 
 // Pages Files
 @import './pages/Faq-section/faq';
 
 // Partiles Files
 @import './partiles/header-top-1';
+@import './partiles/header-top-2';
 @import './partiles/socal-links';
 @import './partiles/primary-btn';
 @import './partiles/header-middle';
@@ -78,3 +89,7 @@
 @import './partiles/faq-list-area/faq-list';
 @import './partiles/Faq-Image-area/faq-image-area';
 @import './partiles/Project/project-1';
+@import './partiles/contact-form';
+@import './partiles/client';
+@import './partiles/choose-us';
+@import './partiles/our-service';

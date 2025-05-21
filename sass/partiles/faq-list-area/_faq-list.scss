@@ -1,4 +1,14 @@
 .faq-list-group {
+    @include sm{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @include md{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .faq-list-wraper {
         .faq-list {
             position: relative;

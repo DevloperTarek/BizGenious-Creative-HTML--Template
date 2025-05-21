@@ -1,0 +1,96 @@
+.call-action-area {
+    position: relative;
+    z-index: 1;
+    &.call-action-bg {
+        background: $primary;
+        color: #fff;
+        padding: 105px 105px;
+        @include rmaxwd(992){padding: 60px 105px;}
+        @include sm{padding: 60px;}
+        @include xs{padding: 40px;}
+        border-radius: 10px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: $primary;
+        overflow: hidden;
+        &:hover::after{
+            animation: animate_slide_inTop_right .7s ease-out;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -100%;
+            background: $white;
+            opacity: .7;
+            width: 10px;
+            height: 100%;
+            transition: all .5s ease-out;
+            z-index: 1;
+            transform: translateY(-50%) skew(45deg);
+        }
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background-color: $primary;;
+            opacity: .6;
+            z-index: -1;
+        }
+    }
+    .call-action-shapes {
+        width: 196px;
+        height: 258px;
+        background: #1f1f1f;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 105px;
+        @include rmaxwd(792){display: none;}
+        img{
+            margin-top: 29px;
+            margin-left: 24px;
+            animation: rotate-360deg 2s linear infinite;
+        }
+    }
+    .call-action-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include rmaxwd(792){text-align: center;}
+        @include rmaxwd(992){
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+        .title {
+            font-family: 'Teko',sans-serif;
+            margin-bottom: 0;
+            font-size: 50px;
+            line-height: 60px;
+            color: $white;
+            font-weight: 600;
+            padding-left: 255px;
+            @include rmaxwd(992){font-size: 40px;}
+            @include rmaxwd(768){font-size: 40px; line-height: 50px;}
+            @include rmaxwd(580){font-size: 32px; line-height: 45px;}
+            @include sm{font-size: 30px; line-height: 45px;}
+            @include xs{font-size: 25px; line-height: 35px;}
+            @include rmaxwd(792){padding-left: 0;}
+        }
+        .biz-primary-btn-area{
+            @include rmaxwd(992){padding-left: 270px;}
+            @include rmaxwd(792){padding-left: 0;}
+            .primary-btns{
+                white-space: nowrap;
+            }
+        }
+    }
+}
