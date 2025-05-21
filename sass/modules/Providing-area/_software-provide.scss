@@ -183,8 +183,10 @@
 
             // Shpae Images
             img{
-                &:nth-child(1){@include rmaxwd(1100){width: 100%; max-width: 900px;}
-                    width: auto;
+                &:nth-child(1){
+                    @include rmaxwd(1100){width: 100%; max-width: 900px;}
+                    @include xs{max-width: 180px; width: 100%;}
+                    width: 100%;
                 }
                 &:nth-child(2) {
                     position: absolute;
